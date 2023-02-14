@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="bg_color" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@LoginStyleSheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.LoginController">
+   <children>
+      <BorderPane layoutX="103.0" layoutY="85.0" prefHeight="529.0" prefWidth="789.0" style="-fx-background-color: transparent;">
+         <right>
+            <AnchorPane prefHeight="529.0" prefWidth="364.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="139.0" layoutY="41.0" text="miniManager">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="22.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="36.0" fitWidth="39.0" layoutX="88.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="78.0" layoutY="184.0" text="Login">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="78.0" layoutY="233.0" text="Login to your account">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="74.0" layoutY="273.0" text="Welcome to miniManager" textFill="#837a7a">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="13.0" />
+                     </font>
+                  </Label>
+<!--                  <MFXTextField floatMode="BORDER" floatingText="Enter your id" layoutX="75.0" layoutY="305.0" minHeight="-Infinity" prefHeight="35.0" prefWidth="215.0">-->
+<!--                     <font>-->
+<!--                        <Font size="13.0" />-->
+<!--                     </font>-->
+<!--                  </MFXTextField>-->
+<!--                  <MFXButton buttonType="RAISED" layoutX="85.0" layoutY="401.0" prefHeight="38.0" prefWidth="201.0" text="Login" />-->
+               </children>
+            </AnchorPane>
+         </right>
+         <left>
+            <AnchorPane prefHeight="529.0" prefWidth="423.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="529.0" fitWidth="423.0" layoutX="1.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@test_img.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="71.0" layoutY="317.0" text="miniManager" textFill="WHITE">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
