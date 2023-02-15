@@ -4,11 +4,11 @@ import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
@@ -92,7 +92,7 @@ public class ChangingScene {
      * @param fxmlFileName name of fxml to be changed to.
      * @param event - helps in the changing of scene when invoked
      */
-    public static void changeSceneWindow(ActionEvent event, String fxmlFileName) throws IOException {
+    public static void changeSceneWindow(MouseEvent event, String fxmlFileName) throws IOException {
         FXMLLoader loader = new FXMLLoader(ChangingScene.class.getResource(fxmlFileName + ".fxml"));
         Parent root = loader.load();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

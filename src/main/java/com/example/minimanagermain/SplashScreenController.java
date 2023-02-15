@@ -1,13 +1,11 @@
 package com.example.minimanagermain;
 
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -25,6 +23,7 @@ public class SplashScreenController implements Initializable {
     public static Label percent;
 
     LoadingScreen loadingScreen;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -57,11 +56,12 @@ public class SplashScreenController implements Initializable {
                         progressBar1.setProgress(progressBar1.getProgress() + 0.1);
                         if ((int) progressBar1.getProgress() == 1){
 
-                            try {
-                                ChangingScene.changeSceneWindow(new ActionEvent(), "login");
+
+                           /* try {
+//                                ChangingScene.changeSceneWindow(new ActionEvent(), "login");
                             } catch (IOException e) {
                                 throw new RuntimeException(e);
-                            }
+                            }*/
 
                             System.out.println("progress num = "+ progressBar1.getProgress());
                             try {
