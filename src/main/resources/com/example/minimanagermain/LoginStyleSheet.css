@@ -1,3 +1,17 @@
 #bg_color{
     -fx-background-color: #0070FF;
 }
+
+.btn{
+    -fx-background-color: #0070FF;
+    -fx-border-width:2;
+    -fx-background-radius:15;
+}
+
+.btn:hover{
+    -fx-background-color: #ffffff;
+    -fx-border-width:2;
+    -fx-border-color:#0070FF;
+    -fx-border-radius:15;
+    -fx-text-fill:#0070FF;
+}

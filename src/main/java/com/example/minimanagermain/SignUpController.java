@@ -16,7 +16,7 @@ public class SignUpController implements Initializable {
     private AnchorPane signUpAnchor;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-loginBtn.setOnMouseClicked(event -> {
+    loginBtn.setOnMouseClicked(event -> {
     ChangingScene.translateForward(LoginController.parentStackPane, "login", signUpAnchor);
 });
     }
