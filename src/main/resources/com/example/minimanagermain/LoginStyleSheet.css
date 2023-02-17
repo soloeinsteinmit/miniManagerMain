@@ -15,3 +15,12 @@
     -fx-border-radius:15;
     -fx-text-fill:#0070FF;
 }
+
+.labels{
+ -fx-text-fill: #0070FF;
+ -fx-font-style: BOLD;
+}
+.labels:hover{
+  -fx-text-fill: #0070FF;
+  -fx-font-style: ITALIC;
+}

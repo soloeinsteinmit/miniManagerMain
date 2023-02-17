@@ -2,6 +2,7 @@ package com.example.minimanagermain;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
@@ -18,7 +19,7 @@ public class LoginController implements Initializable {
     private AnchorPane loginAnchor;
 
     @FXML
-    private Label nextSceneLabel;
+    private Button nextSceneLabel;
 
     @FXML
     private StackPane parentContainer;

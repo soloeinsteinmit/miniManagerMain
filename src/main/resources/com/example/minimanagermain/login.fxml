@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane fx:id="parentContainer" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.LoginController">
+<StackPane fx:id="parentContainer" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.LoginController">
    <children>
       <AnchorPane id="bg_color" fx:id="loginAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@LoginStyleSheet.css">
          <children>
@@ -47,7 +47,7 @@
                         </Label>
                         <TextField layoutX="50.0" layoutY="240.0" prefHeight="35.0" prefWidth="265.0" />
                         <TextField layoutX="53.0" layoutY="308.0" prefHeight="35.0" prefWidth="265.0" />
-                        <Button layoutX="47.0" layoutY="365.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" styleClass="btn" text="Log in " textFill="#f2f2f2">
+                        <Button fx:id="nextSceneLabel" layoutX="47.0" layoutY="365.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" styleClass="btn" text="Log in " textFill="#f2f2f2">
                            <font>
                               <Font name="SansSerif Bold" size="13.0" />
                            </font>
@@ -57,7 +57,7 @@
                               <Font name="SansSerif Regular" size="11.0" />
                            </font>
                         </Text>
-                        <Label fx:id="signUp" layoutX="130.0" layoutY="416.0" prefHeight="27.0" prefWidth="57.0" text=" Sign up" textFill="#0070ff">
+                        <Label fx:id="signUp" layoutX="130.0" layoutY="416.0" prefHeight="27.0" prefWidth="57.0" styleClass="labels" stylesheets="@LoginStyleSheet.css" text=" Sign up" textFill="#0070ff">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
@@ -91,14 +91,6 @@
                            <font>
                               <Font name="SansSerif Bold" size="48.0" />
                            </font>
-                        </Label>
-                        <Label fx:id="nextSceneLabel" layoutX="21.0" layoutY="54.0" text="press here to login" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="36.0" />
-                           </font>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
                         </Label>
                      </children>
                   </AnchorPane>
