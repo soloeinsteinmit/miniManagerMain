@@ -17,7 +17,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.HomeController">
    <center>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="893.0" style="-fx-background-color: #eeeeee; -fx-border-radius: 20;">
+      <AnchorPane  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="893.0" style="-fx-background-color: #eeeeee; -fx-border-radius: 20;">
          <children>
             <HBox layoutX="89.0" layoutY="14.0" style="-fx-background-color: white;">
                <children>
