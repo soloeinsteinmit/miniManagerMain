@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.HomeController">
+<BorderPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.HomeController">
    <center>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="893.0" style="-fx-background-color: #eeeeee; -fx-border-radius: 20;">
          <children>
@@ -33,6 +33,7 @@
                   </TextField>
                </children>
             </HBox>
+            <Button fx:id="backButton" layoutX="282.0" layoutY="130.0" mnemonicParsing="false" text="Back" />
          </children>
       </AnchorPane>
    </center>
@@ -134,10 +135,10 @@
                   </Label>
                </children>
             </VBox>
-            <MenuButton layoutX="1008.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="73.0" style="-fx-border-radius: 50; -fx-background-color: white;" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <MenuButton fx:id="profileMenu" layoutX="1004.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="73.0" style="-fx-border-radius: 50; -fx-background-color: white;" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="0.0">
               <items>
                 <MenuItem mnemonicParsing="false" text="My Profile" />
-                <MenuItem mnemonicParsing="false" text="Sign out" />
+                <MenuItem fx:id="signOut" mnemonicParsing="false" text="Sign out" />
               </items>
                <graphic>
                   <ImageView fitHeight="41.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
