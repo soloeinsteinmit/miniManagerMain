@@ -24,3 +24,12 @@
   -fx-text-fill: #0070FF;
   -fx-font-style: ITALIC;
 }
+
+.hbtn{
+    -fx-background-color:#2D2D31;
+}
+
+.hbtn:hover{
+    -fx-background-color: #6E6E6E;
+
+}

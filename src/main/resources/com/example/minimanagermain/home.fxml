@@ -40,7 +40,7 @@
    <left>
       <VBox prefHeight="562.0" prefWidth="188.0" spacing="10.0" style="-fx-background-color: #2D2D31;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="dashboardBtn" graphicTextGap="15.0" mnemonicParsing="false" style="-fx-background-color: #2D2D31;" text="Dashboard" textFill="WHITE">
+            <Button fx:id="dashboardBtn" graphicTextGap="15.0" mnemonicParsing="false" style="-fx-background-color: #2D2D31;" styleClass="hbtn" stylesheets="@LoginStyleSheet.css" text="Dashboard" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -55,7 +55,7 @@
                   <Insets top="60.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="resultsBtn" graphicTextGap="15.0" mnemonicParsing="false" style="-fx-background-color: #2D2D31;" text="Exams Result" textFill="WHITE">
+            <Button fx:id="resultsBtn" graphicTextGap="15.0" mnemonicParsing="false" style="-fx-background-color: #2D2D31;" styleClass="hbtn" stylesheets="@LoginStyleSheet.css" text="Exams Result" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -67,19 +67,19 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="stdBtn" graphicTextGap="15.0" mnemonicParsing="false" style="-fx-background-color: #2D2D31;" text="Students" textFill="WHITE">
+            <Button fx:id="stdBtn" graphicTextGap="15.0" mnemonicParsing="false" style="-fx-background-color: #2D2D31;" styleClass="hbtn" stylesheets="@LoginStyleSheet.css" text="Students" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@ClassList_icon.png" />
+                        <Image url="@Student_icon.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="admissionBtn" graphicTextGap="15.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="131.0" style="-fx-background-color: #2D2D31;" text="Admission" textFill="WHITE">
+            <Button fx:id="admissionBtn" graphicTextGap="15.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="131.0" style="-fx-background-color: #2D2D31;" styleClass="hbtn" stylesheets="@LoginStyleSheet.css" text="Admission" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -91,7 +91,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="examsBtn" graphicTextGap="15.0" mnemonicParsing="false" style="-fx-background-color: #2D2D31; -fx-text-alignment: left;" text="Exams" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="examsBtn" graphicTextGap="15.0" mnemonicParsing="false" style="-fx-background-color: #2D2D31; -fx-text-alignment: left;" styleClass="hbtn" stylesheets="@LoginStyleSheet.css" text="Exams" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -103,7 +103,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="settingsBtn" graphicTextGap="15.0" mnemonicParsing="false" style="-fx-background-color: #2D2D31;" text="Settings" textFill="WHITE">
+            <Button fx:id="settingsBtn" graphicTextGap="15.0" mnemonicParsing="false" style="-fx-background-color: #2D2D31;" styleClass="hbtn" stylesheets="@LoginStyleSheet.css" text="Settings" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -111,6 +111,18 @@
                   <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@setting_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="stdBtn1" graphicTextGap="15.0" layoutX="10.0" layoutY="186.0" mnemonicParsing="false" style="-fx-background-color: #2D2D31;" styleClass="hbtn" stylesheets="@LoginStyleSheet.css" text="Assessment" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Assessment_icon.png" />
                      </image>
                   </ImageView>
                </graphic>
