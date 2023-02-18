@@ -11,18 +11,27 @@ import java.util.ResourceBundle;
 
 public class HomeController implements Initializable {
     @FXML
-    private Button backBtn;
+    private Button admissionBtn;
+
+    @FXML
+    private Button dashboardBtn;
+
+    @FXML
+    private Button examsBtn;
+
+    @FXML
+    private Button resultsBtn;
+
+    @FXML
+    private Button settingsBtn;
+
+    @FXML
+    private Button stdBtn;
 
     @FXML
     private AnchorPane homeAnchor;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        backBtn.setOnMouseClicked(event -> {
-            try {
-                ChangingScene.changeSceneWindow(event, "login");
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        });
+        
     }
 }
