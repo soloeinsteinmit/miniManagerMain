@@ -1,0 +1,98 @@
+.mfx-text-field {
+    -fx-text-fill: white;
+	-fx-background-color:  #172242;
+	-fx-background-radius: 2;
+	-fx-border-color:  #172242;
+	-fx-border-radius: 2;
+}
+.mfx-text-field1 {
+    -fx-text-fill: black;
+	-fx-background-color: #FFFFFF;
+	-fx-background-radius: 2;
+	-fx-border-color: #BCBCBC;
+	-fx-border-radius: 2;
+}
+
+.mfx-text-field1:focus-within {
+	-fx-background-insets: 2;
+	-fx-border-color:  #0E172A;
+	-fx-border-width: 1.5;
+	-fx-border-insets: -0.5;
+}
+
+.mfx-text-field .text-field {
+	-fx-highlight-fill: #9EA3AE; /* Selected text highlight */
+	-fx-prompt-text-fill: #BCBCBC; /* Prompt text color */
+}
+.mfx-password-field:disabled .eye-icon {
+	-mfx-color: #bcbcbc;
+}
+
+.mfx-password-field .text-field{
+    -fx-highlight-fill: #9EA3AE;
+    -fx-prompt-text-fill: #BCBCBC
+}
+
+.sign_in_textField {
+    -fx-text-fill : white;
+}
+
+.bg_color {
+    -fx-background-color: linear-gradient(from 100.0% 0.0% to 0.0% 100.0%, #003399ff 0.0%, #2a2146ff 100.0%);
+}
+
+.bg_color_btn {
+    -fx-background-color: linear-gradient(from 100.0% 0.0% to 0.0% 100.0%, #003399ff 0.0%, #2a2146ff 100.0%);
+}
+.bg_color_btn:hover {
+    -fx-background-color: linear-gradient(from 0.0% 100.0% to 100.0% 0.0%, #003399ff 0.0%, #2a2146ff 100.0%);
+}
+
+.btn_sign_out {
+    -fx-background-radius: 30;
+    -fx-border-color: white;
+    -fx-border-radius: 30;
+    -fx-background-color: #5530BE;
+}
+.btn_sign_out:hover {
+    -fx-background-radius: 30;
+    -fx-border-color: white;
+    -fx-border-radius: 30;
+    -fx-background-color: #16214021;
+}
+
+.gen_acc_id{
+    -fx-background-color: #0E172A;
+    -fx-font-size: 11;
+    -fx-font-weight: normal;
+}
+.gen_acc_id:hover{
+    -fx-background-color: #1D3058;
+    -fx-font-size: 10.5;
+    -fx-font-weight: normal;
+}
+
+.forget_password {
+    -fx-text-fill : white;
+}
+.forget_password:hover {
+    -fx-text-fill : #6F7788;
+}
+
+.forgotPasswordButtons{
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-font-size: 13;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-weight: normal;
+}
+.forgotPasswordButtons:hover{
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-font-size: 12;
+    -fx-background-color: #F0F0F0;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+

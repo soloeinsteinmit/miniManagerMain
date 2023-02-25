@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import io.github.palexdev.materialfx.controls.*?>
+<?import io.github.palexdev.materialfx.dialogs.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+
+<StackPane fx:id="mainStackPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.LoginController">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="830.0" style="-fx-background-color: #14213D;">
+         <children>
+            <Circle fill="#ae858a" layoutX="77.0" layoutY="585.0" radius="144.0" stroke="TRANSPARENT" strokeType="INSIDE">
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+            </Circle>
+            <Polygon fill="#b3dd71" layoutX="671.0" layoutY="133.0" points="-51.0, 47.0, 341.0, 72.0, 111.0, -229.0" stroke="#b3dd71" strokeType="INSIDE" visible="false" />
+            <ImageView fitHeight="311.0" fitWidth="409.0" layoutX="626.0" layoutY="-89.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Polygon_green.png" />
+               </image>
+            </ImageView>
+            <StackPane fx:id="parentDialogShow" layoutX="59.0" layoutY="54.0" style="-fx-background-color: #0E172A; -fx-background-radius: 10; -fx-border-radius: 10;">
+               <children>
+                  <AnchorPane fx:id="anchorBlur" prefHeight="538.0" prefWidth="713.0" style="-fx-background-color: #0E172A; -fx-background-radius: 10;">
+                     <children>
+                        <VBox fx:id="signIn_vBox" layoutY="60.0" prefHeight="447.0" prefWidth="443.0" style="-fx-background-color: #0E172A;" />
+                        <VBox fx:id="createAccount_vBox" layoutX="276.0" layoutY="39.0" prefHeight="462.0" prefWidth="433.0" style="-fx-background-color: #0E172A;" visible="false" />
+                        <VBox fx:id="vBox" alignment="TOP_RIGHT" layoutX="442.0" prefHeight="538.0" prefWidth="271.0" style="-fx-background-color: white; -fx-background-radius: 10 10 10 10;" />
+                        <Text fx:id="ibank_signUp" fill="#5530be" layoutX="72.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="iBankAccount">
+                           <font>
+                              <Font name="Comfortaa Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <ImageView fx:id="logo_signUp" fitHeight="45.0" fitWidth="51.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+            <Circle fill="#ae858a" layoutX="77.0" layoutY="585.0" radius="144.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" />
+            <JFXDialog fx:id="forgotPasswordDialogBox" layoutX="208.0" layoutY="204.0" maxHeight="240.0" maxWidth="416.0" minHeight="240.0" minWidth="416.0" prefHeight="240.0" prefWidth="416.0" style="-fx-background-radius: 0; -fx-border-radius: 0;" visible="false">
+               <children>
+                  <JFXDialogLayout alignment="CENTER" maxHeight="240.0" maxWidth="416.0" minHeight="240.0" minWidth="416.0" prefHeight="240.0" prefWidth="416.0" style="-fx-border-radius: 0; -fx-background-radius: 0;">
+                     <children>
+                        <AnchorPane fx:id="dialogAnchor" maxHeight="240.0" maxWidth="416.0" minHeight="240.0" minWidth="416.0" prefHeight="240.0" prefWidth="416.0" style="-fx-background-color: white; -fx-background-radius: 0; -fx-border-radius: 0;" translateY="-42.0">
+                           <children>
+                              <MFXButton fx:id="changePasswordBtn" depthLevel="LEVEL1" layoutX="124.0" layoutY="205.0" prefHeight="40.0" prefWidth="146.0" rippleAnimateShadow="true" rippleRadius="20.0" styleClass="forgotPasswordButtons" stylesheets="@banking_system.css" text="CHANGE PASSWORD" translateY="-5.0">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </MFXButton>
+                              <MFXTextField fx:id="fg_emailTextField" floatMode="DISABLED" layoutX="62.0" layoutY="49.0" minHeight="40.0" prefHeight="40.0" prefWidth="293.0" promptText="ENTER YOUR REGISTERED EMAIL ">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="13.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets left="10.0" />
+                                 </opaqueInsets>
+                              </MFXTextField>
+                              <MFXPasswordField fx:id="fg_passwordTextField_new" floatMode="DISABLED" layoutX="62.0" layoutY="99.0" minHeight="40.0" prefHeight="40.0" prefWidth="293.0" promptText="ENTER NEW PASSWORD">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="13.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets left="10.0" />
+                                 </opaqueInsets>
+                              </MFXPasswordField>
+                              <MFXPasswordField fx:id="fg_passwordTextField_newReEnter" floatMode="DISABLED" layoutX="62.0" layoutY="149.0" minHeight="40.0" prefHeight="40.0" prefWidth="293.0" promptText="RE-ENTER NEW PASSWORD">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="13.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets left="10.0" />
+                                 </opaqueInsets>
+                              </MFXPasswordField>
+                              <MFXButton fx:id="cancelBtn" depthLevel="LEVEL1" layoutX="270.0" layoutY="205.0" prefHeight="40.0" prefWidth="146.0" rippleAnimateShadow="true" rippleRadius="20.0" styleClass="forgotPasswordButtons" stylesheets="@banking_system.css" text="CANCEL" translateY="-5.0">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </MFXButton>
+                              <Text layoutX="117.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FORGOT PASSWORD">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="19.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </JFXDialogLayout>
+               </children>
+            </JFXDialog>
+            <Pane fx:id="movablePane" layoutX="1.0" prefHeight="52.0" prefWidth="830.0">
+               <children>
+                  <MFXButton fx:id="close_white_signUp" alignment="CENTER" computeRadiusMultiplier="false" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" layoutX="3.0" layoutY="8.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" prefHeight="30.0" prefWidth="30.0" rippleColor="#bdbdbd71" rippleRadius="24.0" rippleRadiusMultiplier="1.0" stylesheets="@dashboard.css">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Close_blue.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <styleClass>
+                        <String fx:value="closeBtnLogin" />
+                        <String fx:value="close_img" />
+                     </styleClass>
+                  </MFXButton>
+                  <MFXButton fx:id="minimizeBtn" alignment="CENTER" computeRadiusMultiplier="false" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" layoutX="35.0" layoutY="8.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" prefHeight="30.0" prefWidth="30.0" rippleColor="#bdbdbd71" rippleRadius="24.0" rippleRadiusMultiplier="1.0" stylesheets="@dashboard.css">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@minimize_blue.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <styleClass>
+                        <String fx:value="minimizeBtnLogin" />
+                        <String fx:value="minimize_img" />
+                     </styleClass>
+                  </MFXButton>
+               </children>
+            </Pane>
+            <MFXGenericDialog fx:id="mfxGenericDialog" alwaysOnTop="true" headerText="Invalid data input." layoutX="216.0" layoutY="224.0" minHeight="136.0" prefHeight="136.0" prefWidth="400.0" visible="false">
+               <center>
+                  <Pane prefHeight="103.0" prefWidth="378.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Text layoutX="12.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Provided user inputs not in database. Please check your email, password or account id." wrappingWidth="354.9999999999999">
+                           <font>
+                              <Font name="Comfortaa Regular" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+               </center>
+               <bottom>
+                  <Pane prefHeight="36.0" prefWidth="378.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <MFXButton alignment="CENTER" depthLevel="LEVEL0" layoutX="267.0" layoutY="1.0" prefHeight="35.0" prefWidth="111.0" style="-fx-background-color: white; -fx-border-color: white; -fx-text-fill: #000000; -fx-border-width: 1.5;" text="Cancel">
+                           <font>
+                              <Font name="Comfortaa Bold" size="13.0" />
+                           </font>
+                        </MFXButton>
+                     </children>
+                  </Pane>
+               </bottom>
+            </MFXGenericDialog>
+         </children>
+      </Pane>
+   </children>
+</StackPane>
