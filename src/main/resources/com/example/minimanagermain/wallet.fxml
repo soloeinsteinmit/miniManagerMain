@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
@@ -40,5 +41,6 @@
             </LinearGradient>
          </textFill>
       </Label>
+      <MFXTextField layoutX="401.0" layoutY="139.0" />
    </children>
 </AnchorPane>

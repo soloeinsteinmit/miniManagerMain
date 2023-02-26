@@ -60,7 +60,7 @@ public class CreateAccountController implements Initializable {
             Random acc_id = new Random();
             int min = 11111;
             int max = 99999;
-            account_id_textField_signIn.setText(String.valueOf(acc_id.nextInt(max - min + 1)+min));
+            account_id_textField_signIn.setText("G-"+ String.valueOf(acc_id.nextInt(max - min + 1)+min));
         });
     }
 

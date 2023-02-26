@@ -1,7 +1,7 @@
 package com.example.minimanagermain;
 
 
-import com.example.minimanagermain.OtherClasses.OtherCode;
+import com.example.minimanagermain.OtherClasses.ValidateEmail;
 import com.example.minimanagermain.OtherClasses.WindowManagement;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.events.JFXDialogEvent;
@@ -349,7 +349,7 @@ public class LoginController implements Initializable {
         });
 
         changePasswordButton.setOnAction(event -> {
-            if (OtherCode.validateEmail(fgEmail.getText()) &&
+            if (ValidateEmail.validateEmail(fgEmail.getText()) &&
                     fgPassNew.getText().equals(fgPassNewRe.getText())){
                 if (isFoundDialog){
                     String title = "Forgot password";

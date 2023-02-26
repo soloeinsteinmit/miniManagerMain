@@ -1,6 +1,6 @@
 package com.example.minimanagermain;
 
-import com.example.minimanagermain.OtherClasses.OtherCode;
+import com.example.minimanagermain.OtherClasses.ValidateEmail;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXPasswordField;
 import io.github.palexdev.materialfx.controls.MFXTextField;
@@ -95,7 +95,7 @@ public class SignInIBankAccountTextController implements Initializable {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
                     root = loader.load();
 
-                    if (OtherCode.validateEmail(getEmailText.getText())){
+                    if (ValidateEmail.validateEmail(getEmailText.getText())){
 
                         HomeController.str_userName = userName;
                         HomeController.str_email = email_textField_signUp.getText();

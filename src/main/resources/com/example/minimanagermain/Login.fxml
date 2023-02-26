@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import io.github.palexdev.materialfx.controls.*?>
-<?import io.github.palexdev.materialfx.dialogs.*?>
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
-
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.materialfx.dialogs.MFXGenericDialog?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <StackPane fx:id="mainStackPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.LoginController">
    <children>
@@ -34,14 +44,14 @@
                         <VBox fx:id="signIn_vBox" layoutY="60.0" prefHeight="447.0" prefWidth="443.0" style="-fx-background-color: #0E172A;" />
                         <VBox fx:id="createAccount_vBox" layoutX="276.0" layoutY="39.0" prefHeight="462.0" prefWidth="433.0" style="-fx-background-color: #0E172A;" visible="false" />
                         <VBox fx:id="vBox" alignment="TOP_RIGHT" layoutX="442.0" prefHeight="538.0" prefWidth="271.0" style="-fx-background-color: white; -fx-background-radius: 10 10 10 10;" />
-                        <Text fx:id="ibank_signUp" fill="#5530be" layoutX="72.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="iBankAccount">
+                        <Text fx:id="ibank_signUp" fill="#5530be" layoutX="72.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="miniManager">
                            <font>
                               <Font name="Comfortaa Bold" size="18.0" />
                            </font>
                         </Text>
-                        <ImageView fx:id="logo_signUp" fitHeight="45.0" fitWidth="51.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="logo_signUp" fitHeight="40.0" fitWidth="40.0" layoutX="22.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@logo.png" />
+                              <Image url="@icon.png" />
                            </image>
                         </ImageView>
                      </children>
