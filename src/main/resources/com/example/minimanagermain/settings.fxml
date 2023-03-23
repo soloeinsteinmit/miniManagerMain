@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="643.0" prefWidth="868.0" style="-fx-background-color: #0E172A; -fx-background-radius: 0 40 40 0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.SettingsController">
+   <children>
+      <Label alignment="CENTER" layoutX="261.0" layoutY="285.0" text="I AM SETTINGS" wrapText="true">
+         <font>
+            <Font name="Segoe UI Semibold" size="50.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3149000108242035" green="0.619271457195282" blue="0.6700000166893005" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.47256097560975613">
+                     <color>
+                        <Color red="0.1223958358168602" green="0.07730263471603394" blue="0.6184210777282715" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.18359999358654022" green="0.5050780773162842" blue="0.6800000071525574" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </children>
+</AnchorPane>

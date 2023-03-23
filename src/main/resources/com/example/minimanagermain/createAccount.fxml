@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="translateSignInPane" prefHeight="462.0" prefWidth="433.0" style="-fx-background-color: #0E172A;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.CreateAccountController">
+   <children>
+      <Text fill="#5530be" layoutX="44.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Account" textAlignment="CENTER" wrappingWidth="344.4375">
+         <font>
+            <Font name="Leelawadee UI Bold" size="32.0" />
+         </font>
+      </Text>
+      <MFXButton fx:id="signUp_btn_signIn" alignment="CENTER" layoutX="138.0" layoutY="396.0" prefHeight="52.0" prefWidth="158.0" rippleAnimateShadow="true" rippleColor="#bdbdbd12" style="-fx-background-radius: 30;" styleClass="bg_color_btn" stylesheets="@banking_system.css" text="SIGN UP" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MFXButton>
+      <ImageView fitHeight="37.0" fitWidth="45.0" layoutX="130.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@facebook_circled_new.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="45.0" layoutX="191.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@google_plus_new.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="45.0" layoutX="251.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@linkedin_circled.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Text fill="#6f7788" layoutX="103.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="or use your email for registration:" textAlignment="CENTER" wrappingWidth="226.94775390625">
+         <font>
+            <Font name="Segoe UI Semibold" size="12.0" />
+         </font>
+      </Text>
+      <MFXButton fx:id="generate_accId_btn" alignment="CENTER" depthLevel="LEVEL0" layoutX="236.0" layoutY="332.0" prefHeight="45.0" prefWidth="138.0" rippleAnimateShadow="true" rippleColor="#bdbdbd12" styleClass="gen_acc_id" stylesheets="@banking_system.css" text="GENERATE ACCOUNT ID" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Segoe UI Semibold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MFXButton>
+      <MFXTextField fx:id="name_textField_signIn" floatMode="DISABLED" layoutX="60.0" layoutY="162.0" minHeight="45.0" prefHeight="45.0" prefWidth="314.0" promptText="FULL NAME" stylesheets="@banking_system.css">
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+         <font>
+            <Font name="Segoe UI Semibold" size="13.0" />
+         </font>
+         <textFill>
+            <Color red="1.0" green="1.0" blue="1.0" />
+         </textFill>
+      </MFXTextField>
+      <ImageView fitHeight="18.0" fitWidth="26.0" layoutX="68.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@name.png" />
+         </image>
+      </ImageView>
+      <MFXTextField fx:id="email_textField_signIn" floatMode="DISABLED" layoutX="59.0" layoutY="219.0" minHeight="45.0" prefHeight="45.0" prefWidth="314.0" promptText="smithwills@gmail.com" stylesheets="@banking_system.css">
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+         <font>
+            <Font name="Segoe UI Semibold" size="13.0" />
+         </font>
+         <textFill>
+            <Color red="1.0" green="1.0" blue="1.0" />
+         </textFill>
+      </MFXTextField>
+      <ImageView fitHeight="18.0" fitWidth="26.0" layoutX="67.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@email.png" />
+         </image>
+      </ImageView>
+      <MFXPasswordField fx:id="password_textField_signIn" allowCopy="true" allowCut="true" allowPaste="true" floatMode="DISABLED" floatingTextGap="0.0" layoutX="60.0" layoutY="278.0" minHeight="45.0" prefHeight="45.0" prefWidth="314.0" promptText="PASSWORD" style="-fx-background-color: #172242; -fx-border-color: #172242; -fx-background-radius: 2; -fx-border-radius: 2; -fx-text-fill: white; -fx-prompt-text-fill: #BCBCBC;" stylesheets="@banking_system.css">
+         <textFill>
+            <Color red="1.0" green="1.0" blue="1.0" />
+         </textFill>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+         <font>
+            <Font name="Segoe UI Semibold" size="13.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </MFXPasswordField>
+      <ImageView fitHeight="20.0" fitWidth="18.0" layoutX="68.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@password.png" />
+         </image>
+      </ImageView>
+      <MFXTextField fx:id="account_id_textField_signIn" editable="false" floatMode="DISABLED" layoutX="60.0" layoutY="332.0" minHeight="45.0" prefHeight="45.0" prefWidth="170.0" promptText="ACCOUNT ID " stylesheets="@banking_system.css">
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+         <font>
+            <Font name="Segoe UI Semibold" size="13.0" />
+         </font>
+         <textFill>
+            <Color red="1.0" green="1.0" blue="1.0" />
+         </textFill>
+      </MFXTextField>
+      <ImageView fitHeight="18.0" fitWidth="26.0" layoutX="68.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@id.png" />
+      </ImageView>
+   </children>
+</Pane>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.gleidson28.GNAvatarView?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressSpinner?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="643.0" prefWidth="868.0" style="-fx-background-color: #0E172A; -fx-background-radius: 0 40 40 0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.HomeController">
+   <children>
+      <Pane layoutX="601.0" layoutY="19.0" prefHeight="606.0" prefWidth="247.0" style="-fx-background-color: #172242; -fx-background-radius: 20;" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="19.0">
+         <children>
+            <MFXButton fx:id="logoutBtn" alignment="CENTER" computeRadiusMultiplier="false" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" layoutX="197.0" layoutY="18.0" minHeight="28.0" minWidth="28.0" prefHeight="28.0" prefWidth="28.0" rippleColor="#bdbdbd00" styleClass="rightPaneBtns" stylesheets="@dashboard.css">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logout.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+            </MFXButton>
+            <Label fx:id="user_name" layoutX="53.0" layoutY="17.0" prefHeight="30.0" prefWidth="126.0" text="SOLOMON ESHUN" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Comfortaa Bold" size="11.0" />
+               </font>
+            </Label>
+            <MFXButton alignment="CENTER" computeRadiusMultiplier="false" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" layoutX="197.0" layoutY="63.0" minHeight="28.0" minWidth="30.0" prefHeight="30.0" prefWidth="30.0" rippleColor="#bdbdbd00" styleClass="rightPaneBtns" stylesheets="@dashboard.css" />
+            <MFXButton alignment="CENTER" computeRadiusMultiplier="false" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" layoutX="197.0" layoutY="288.0" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" prefHeight="28.0" prefWidth="28.0" rippleColor="#bdbdbd00" styleClass="rightPaneBtns" stylesheets="@dashboard.css" />
+            <Text fill="WHITE" layoutX="16.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total no. of learners">
+               <font>
+                  <Font name="Comfortaa Bold" size="13.0" />
+               </font>
+            </Text>
+            <Label fx:id="numOfContactsLabel" layoutX="215.0" layoutY="118.0" styleClass="contactLabel" stylesheets="@dashboard.css" text="16" textFill="#979090">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <MFXButton alignment="CENTER" computeRadiusMultiplier="false" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" layoutX="197.0" layoutY="466.0" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" prefHeight="28.0" prefWidth="28.0" rippleColor="#bdbdbd00" styleClass="rightPaneBtns" stylesheets="@dashboard.css" />
+            <Label fx:id="abbr_name" layoutX="10.0" layoutY="63.0" prefHeight="30.0" prefWidth="118.0" text="S Eshun" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Comfortaa Bold" size="12.0" />
+               </font>
+            </Label>
+            <GNAvatarView fx:id="user_profile" layoutX="14.0" layoutY="15.0" prefHeight="30.0" prefWidth="30.0" stroke="#ffffff00" strokeWidth="0.0" type="CIRCLE">
+               <image>
+                  <Image url="@male_user.png" />
+               </image>
+            </GNAvatarView>
+         </children>
+      </Pane>
+      <Pane layoutX="39.0" layoutY="219.0" prefHeight="90.0" prefWidth="116.0" style="-fx-background-color: #172242; -fx-background-radius: 15;">
+         <children>
+            <MFXProgressSpinner layoutX="17.0" layoutY="7.0" prefHeight="76.0" prefWidth="83.0" progress="0.74" stylesheets="@dashboard.css" />
+         </children>
+      </Pane>
+      <MFXButton alignment="CENTER" computeRadiusMultiplier="false" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" layoutX="434.0" layoutY="47.0" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" prefHeight="28.0" prefWidth="28.0" rippleColor="#bdbdbd00" styleClass="mainPaneBtns" stylesheets="@dashboard.css" />
+      <Label fx:id="user_email" alignment="CENTER" layoutX="229.0" layoutY="535.0" prefHeight="30.0" prefWidth="211.0" text="solomoneinsteinmit@gmail.com" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="user_acc_id" layoutX="259.0" layoutY="576.0" text="13464" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Segoe UI Semibold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="user_password" layoutX="395.0" layoutY="571.0" prefHeight="27.0" prefWidth="53.0" text="great" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Segoe UI Semibold" size="15.0" />
+         </font>
+      </Label>
+      <Text fill="WHITE" layoutX="313.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSWORD: ">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="234.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID: ">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Text>
+      <Label layoutX="107.0" layoutY="75.0" text="come up with something to design this page" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="362.0" layoutY="252.0" text="HOME" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="106.0" layoutY="106.0" text="also do well to change the names of the tabs" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="868.0" style="-fx-background-color: #0E172A; -fx-background-radius: 0 40 40 0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.WalletController">
+   <children>
+      <Label alignment="CENTER" layoutX="281.0" layoutY="314.0" text="I AM WALLET" wrapText="true">
+         <font>
+            <Font name="Segoe UI Semibold" size="50.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8815789222717285" green="0.17828845977783203" blue="0.020406920462846756" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006711409395973154">
+                     <color>
+                        <Color red="0.8815789222717285" green="0.17828845977783203" blue="0.020406920462846756" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.4776763791127844">
+                     <color>
+                        <Color red="0.27237653732299805" green="0.26851850748062134" blue="0.5" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.24285250902175903" green="0.6842105388641357" blue="0.20272904634475708" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <MFXTextField layoutX="401.0" layoutY="139.0" />
+   </children>
+</AnchorPane>
