@@ -15,6 +15,7 @@ public class HomeControllerMain implements Initializable {
 
     @FXML
     private AnchorPane homeAnchor;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         backBtn.setOnMouseClicked(event -> {

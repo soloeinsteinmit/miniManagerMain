@@ -246,10 +246,10 @@ public class UserCredentialsController implements Initializable {
                 } else if (userFemale.isSelected()) {
                     gender = userFemale.getText();
                 }
-                FXMLLoader loader = new FXMLLoader(UserCredentialsController.class.getResource("dashboard.fxml"));
+                FXMLLoader loader = new FXMLLoader(UserCredentialsController.class.getResource("main_page.fxml"));
                 root = loader.load();
 
-                HomeController userCredential = loader.getController();
+                DashboardController userCredential = loader.getController();
 
                 String[] splitName = userName.getText().split(" ");
                 String[] firstName = splitName[0].split("");

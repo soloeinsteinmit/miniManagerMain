@@ -1,88 +1,129 @@
 package com.example.minimanagermain;
 
-import com.example.minimanagermain.OtherClasses.WindowManagement;
+import io.github.gleidson28.GNAvatarView;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class DashboardController implements Initializable {
+    @FXML
+    private Label abbr_name;
 
     @FXML
-    private StackPane center_pane;
+    private Label current_Month;
 
     @FXML
-    private MFXButton homeBtn;
+    private Label freeTransfer;
 
     @FXML
-    private MFXButton closeBtn;
-    @FXML
-    private Pane movablePane;
+    private MFXButton logoutBtn;
 
     @FXML
-    private MFXButton minimizeBtn;
-    public static StackPane centerPane;
-    public static MFXButton close;
-    public static MFXButton minimize;
-    public static Pane movePane;
+    private Label numOfContactsLabel;
 
+    @FXML
+    private Label user_acc_id;
+
+    @FXML
+    private Label user_email;
+
+    @FXML
+    private Label user_name;
+
+    @FXML
+    private Label user_password;
+
+    @FXML
+    private GNAvatarView user_profile;
+
+    @FXML
+    private Label visa_num_label;
+
+    private static Parent root;
+    public static MFXButton logOutImg;
+    public static Label userName;
+    public static Label email;
+    public static Label password;
+    public static Label visaNumLabel;
+    public static Label free_transfer;
+    public static Label num_of_contact;
+    public static GNAvatarView uProfilePic;
+    public static Label accId;
+    public static Label currentMonth;
+    public static Label abbrName;
+
+    public static String str_userName;
+    public static String str_email;
+    public static String str_password;
+    public static String str_accId;
+    public static String str_currentMonth;
+    public static String str_abbrName;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        centerPane = center_pane;
-        minimize = minimizeBtn;
-        close = closeBtn;
-        movePane = movablePane;
+        userName = user_name;                           email = user_email;
+        password = user_password;                       accId = user_acc_id;
+        abbrName = abbr_name;                           currentMonth = current_Month;
 
-        try {
-            System.out.println("Home");
-            GetFXMLFiles.getFxmlFile(centerPane, "home.fxml");
-            homeBtn.setFocusTraversable(true);
-            HomeController.setUserCredentials();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        visaNumLabel = visa_num_label;                  free_transfer = freeTransfer;
+        num_of_contact = numOfContactsLabel;            uProfilePic = user_profile;
 
-        close.setOnAction(WindowManagement::closeWindow);
-        minimize.setOnAction(WindowManagement::minimizeWindow);
-        WindowManagement.movablePane(movePane);
+        Date date = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM");
+        str_currentMonth = dateFormat.format(date);
 
+        setUserCredentials();
+        System.out.println("home controller = " + str_abbrName);
+
+        logOutImg = logoutBtn;
+        logout();
     }
 
-    public void Home(javafx.event.ActionEvent event) throws IOException {
-        System.out.println("Home");
-        GetFXMLFiles.getFxmlFile(centerPane, "home.fxml");
+    public static void logout(){
+        logOutImg.setOnMouseClicked(event -> {
+            try {
+                root = FXMLLoader.load(Objects.requireNonNull(LoginController.class.getResource("Login.fxml")));
+
+                Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+                stage.setScene(new Scene(root));
+                stage.show();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 
-    public void Analytics(javafx.event.ActionEvent event) throws IOException {
-        System.out.println("Analytics");
-        GetFXMLFiles.getFxmlFile(centerPane, "analytics.fxml");
+    public static void setUserCredentials(){
+        userName.setText(str_userName);
+        email.setText(str_email);
+        accId.setText(str_accId);
+        password.setText(str_password);
+        abbrName.setText(str_abbrName);
     }
 
-    public void Wallet(javafx.event.ActionEvent event) throws IOException {
-        System.out.println("Wallet");
-        GetFXMLFiles.getFxmlFile(centerPane, "wallet.fxml");
-    }
+    public void setUserCredentials2(String name, String abbr_name, InputStream stream, String fTrans){
+        userName.setText(name);
+        free_transfer.setText(fTrans);
+        abbrName.setText(abbr_name);
 
-    public void Profile(javafx.event.ActionEvent event) throws IOException {
-        System.out.println("Profile");
-        GetFXMLFiles.getFxmlFile(centerPane, "profile.fxml");
-    }
-
-    public void Settings(javafx.event.ActionEvent event) throws IOException {
-        System.out.println("Settings");
-        GetFXMLFiles.getFxmlFile(centerPane, "settings.fxml");
-    }
-
-    public void Activity(javafx.event.ActionEvent event) throws IOException {
-        System.out.println("Activity");
-        GetFXMLFiles.getFxmlFile(centerPane, "activity.fxml");
+        Image image = new Image(stream);
+        uProfilePic.setImage(image);
     }
 
 }

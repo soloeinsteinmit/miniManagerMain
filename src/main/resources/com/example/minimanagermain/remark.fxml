@@ -8,9 +8,9 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="868.0" style="-fx-background-color: #0E172A; -fx-background-radius: 0 40 40 0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.WalletController">
+<AnchorPane prefHeight="700.0" prefWidth="868.0" style="-fx-background-color: #0E172A; -fx-background-radius: 0 40 40 0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.RemarkController">
    <children>
-      <Label alignment="CENTER" layoutX="281.0" layoutY="314.0" text="I AM WALLET" wrapText="true">
+      <Label alignment="CENTER" layoutX="281.0" layoutY="314.0" text="I AM REMARK" wrapText="true">
          <font>
             <Font name="Segoe UI Semibold" size="50.0" />
          </font>

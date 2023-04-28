@@ -181,10 +181,8 @@ public class LoginController implements Initializable {
     }
 
     public static void open_sign_up(){
-
             try {
                 fxml = FXMLLoader.load(Objects.requireNonNull(LoginController.class.getResource("signin_iBank.fxml")));
-
 
                 TranslateTransition translateTransition = new TranslateTransition(Duration.seconds(1), panel);
                 translateTransition.setToX(0);
@@ -215,7 +213,6 @@ public class LoginController implements Initializable {
                 System.out.println("Error found in removing or setting fxml sign in");
                 exception.printStackTrace();
             }
-
     }
 
     public static void translateSignUpPane(){

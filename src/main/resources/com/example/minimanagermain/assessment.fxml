@@ -7,9 +7,9 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="643.0" prefWidth="868.0" style="-fx-background-color: #0E172A; -fx-background-radius: 0 40 40 0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.ActivityController">
+<AnchorPane prefHeight="643.0" prefWidth="868.0" style="-fx-background-color: #0E172A; -fx-background-radius: 0 40 40 0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.AssessmentController">
    <children>
-      <Label alignment="CENTER" layoutX="268.0" layoutY="285.0" text="I AM ACTIVITY" wrapText="true">
+      <Label alignment="CENTER" layoutX="217.0" layoutY="278.0" text="I AM ASSESSMENT" wrapText="true">
          <font>
             <Font name="Segoe UI Semibold" size="50.0" />
          </font>
@@ -18,12 +18,12 @@
                <stops>
                   <Stop>
                      <color>
-                        <Color red="0.9868420958518982" green="0.009137426503002644" blue="0.009137426503002644" />
+                        <Color red="0.43148961663246155" green="0.8947368264198303" blue="0.3893762230873108" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.01027452852576971" green="0.006091617979109287" blue="0.1315789520740509" />
+                        <Color red="0.15442252159118652" green="0.14254385232925415" blue="0.8552631735801697" />
                      </color>
                   </Stop>
                </stops>

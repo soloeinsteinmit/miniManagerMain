@@ -7,9 +7,9 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="643.0" prefWidth="868.0" style="-fx-background-color: #0E172A; -fx-background-radius: 0 40 40 0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.AnalyticsController">
+<AnchorPane prefHeight="643.0" prefWidth="868.0" style="-fx-background-color: #0E172A; -fx-background-radius: 0 40 40 0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.ViewStudentsController">
    <children>
-      <Label alignment="CENTER" layoutX="255.0" layoutY="287.0" text="I AM ANALYTICS" wrapText="true">
+      <Label alignment="CENTER" layoutX="255.0" layoutY="287.0" text="I AM VIEW STUDENTS" wrapText="true">
          <font>
             <Font name="Segoe UI Semibold" size="47.0" />
          </font>

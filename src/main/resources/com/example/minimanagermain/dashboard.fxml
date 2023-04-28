@@ -1,316 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import io.github.gleidson28.GNAvatarView?>
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
-<?import java.lang.String?>
-<?import javafx.geometry.Insets?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressSpinner?>
 <?import javafx.scene.Cursor?>
-<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="732.0" prefWidth="1273.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-border-radius: 0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.DashboardController">
-    <children>
-      <Circle layoutX="42.0" layoutY="170.0" opacity="0.2" radius="204.0" stroke="TRANSPARENT" strokeType="INSIDE">
-         <fill>
-            <LinearGradient endX="0.7488151658767772" endY="0.8909952606635071" startX="0.17061611374407584" startY="0.14691943127962087">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.6509804129600525" green="0.6823529601097107" blue="0.4588235318660736" />
-                     </color>
-                  </Stop>
-                  <Stop offset="0.006711409395973154">
-                     <color>
-                        <Color red="0.6509804129600525" green="0.6823529601097107" blue="0.4588235318660736" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="0.3292999863624573" green="0.1923999935388565" blue="0.7400000095367432" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </fill>
-         <effect>
-            <GaussianBlur radius="63.0" />
-         </effect>
-      </Circle>
-      <AnchorPane layoutX="48.0" layoutY="37.0" prefHeight="645.0" prefWidth="1182.0" style="-fx-background-color: #0E172A; -fx-background-radius: 30;">
+<AnchorPane prefHeight="643.0" prefWidth="868.0" style="-fx-background-color: #0E172A; -fx-background-radius: 0 40 40 0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.DashboardController">
+   <children>
+      <Pane layoutX="601.0" layoutY="19.0" prefHeight="606.0" prefWidth="247.0" style="-fx-background-color: #172242; -fx-background-radius: 20;" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="19.0">
          <children>
-              <BorderPane prefHeight="659.0" prefWidth="1182.0" style="-fx-background-radius: 40;">
-                  <left>
-                      <VBox prefHeight="643.0" prefWidth="188.0" spacing="2.0" BorderPane.alignment="CENTER">
-                          <children>
-                              <Pane prefHeight="66.0" prefWidth="208.0">
-                                  <children>
-                                      <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="24.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
-                                          <image>
-                                              <Image url="@icon.png" />
-                                          </image>
-                                      </ImageView>
-                                      <Text fill="#5530be" layoutX="59.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="miniManager">
-                                          <font>
-                                              <Font name="Comfortaa Bold" size="16.0" />
-                                          </font>
-                                      </Text>
-                                  </children>
-                                  <opaqueInsets>
-                                      <Insets />
-                                  </opaqueInsets>
-                                  <VBox.margin>
-                                      <Insets bottom="30.0" />
-                                  </VBox.margin>
-                              </Pane>
-                              <MFXButton fx:id="homeBtn" alignment="CENTER" depthLevel="LEVEL0" graphicTextGap="10.0" onAction="#Home" prefHeight="45.0" prefWidth="200.0" rippleAnimateBackground="false" rippleBackgroundOpacity="0.0" rippleColor="#bdbdbd00" stylesheets="@dashboard.css" text="Home" textFill="WHITE" wrapText="true">
-                                  <graphic>
-                                      <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" styleClass="home_img">
-                                          <image>
-                                              <Image url="@home_outline.png" />
-                                          </image>
-                                      </ImageView>
-                                  </graphic>
-                                  <font>
-                                      <Font name="Segoe UI Semibold" size="13.0" />
-                                  </font>
-                                  <styleClass>
-                                      <String fx:value="vBoxButtons" />
-                                      <String fx:value="home_img" />
-                                  </styleClass>
-                              </MFXButton>
-                              <MFXButton fx:id="analyticsBtn" alignment="CENTER" depthLevel="LEVEL0" graphicTextGap="10.0" layoutX="10.0" layoutY="67.0" onAction="#Analytics" prefHeight="45.0" prefWidth="208.0" rippleAnimateBackground="false" rippleBackgroundOpacity="0.0" rippleColor="#bdbdbd00" stylesheets="@dashboard.css" text="Analytics" textFill="#505664" wrapText="true">
-                                  <graphic>
-                                      <ImageView fitHeight="22.0" fitWidth="22.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
-                                          <image>
-                                              <Image url="@analytics_outline.png" />
-                                          </image>
-                                      </ImageView>
-                                  </graphic>
-                                  <font>
-                                      <Font name="Segoe UI Semibold" size="14.0" />
-                                  </font>
-                                  <styleClass>
-                                      <String fx:value="vBoxButtons" />
-                                      <String fx:value="analytics_img" />
-                                  </styleClass>
-                              </MFXButton>
-                              <MFXButton alignment="CENTER" depthLevel="LEVEL0" graphicTextGap="10.0" layoutX="10.0" layoutY="127.0" onAction="#Wallet" prefHeight="45.0" prefWidth="208.0" rippleAnimateBackground="false" rippleBackgroundOpacity="0.0" rippleColor="#bdbdbd00" stylesheets="@dashboard.css" text="Wallet" textFill="#505664" wrapText="true">
-                                  <graphic>
-                                      <ImageView fitHeight="22.0" fitWidth="22.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
-                                          <image>
-                                              <Image url="@wallet_outline.png" />
-                                          </image>
-                                      </ImageView>
-                                  </graphic>
-                                  <font>
-                                      <Font name="Segoe UI Semibold" size="14.0" />
-                                  </font>
-                                  <styleClass>
-                                      <String fx:value="vBoxButtons" />
-                                      <String fx:value="wallet_img" />
-                                  </styleClass>
-                              </MFXButton>
-                              <MFXButton alignment="CENTER" depthLevel="LEVEL0" graphicTextGap="10.0" layoutX="10.0" layoutY="187.0" onAction="#Profile" prefHeight="45.0" prefWidth="208.0" rippleAnimateBackground="false" rippleBackgroundOpacity="0.0" rippleColor="#bdbdbd00" stylesheets="@dashboard.css" text="Profile" textFill="#505664" wrapText="true">
-                                  <graphic>
-                                      <ImageView fitHeight="22.0" fitWidth="22.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
-                                          <image>
-                                              <Image url="@profile_outline.png" />
-                                          </image>
-                                      </ImageView>
-                                  </graphic>
-                                  <font>
-                                      <Font name="Segoe UI Semibold" size="14.0" />
-                                  </font>
-                                  <styleClass>
-                                      <String fx:value="vBoxButtons" />
-                                      <String fx:value="profile_img" />
-                                  </styleClass>
-                              </MFXButton>
-                              <MFXButton alignment="CENTER" depthLevel="LEVEL0" graphicTextGap="10.0" layoutX="10.0" layoutY="287.0" onAction="#Settings" prefHeight="45.0" prefWidth="208.0" rippleAnimateBackground="false" rippleBackgroundOpacity="0.0" rippleColor="#bdbdbd00" stylesheets="@dashboard.css" text="Settings" textFill="#505664" wrapText="true">
-                                  <graphic>
-                                      <ImageView fitHeight="22.0" fitWidth="22.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
-                                          <image>
-                                              <Image url="@settings_outline.png" />
-                                          </image>
-                                      </ImageView>
-                                  </graphic>
-                                  <font>
-                                      <Font name="Segoe UI Semibold" size="14.0" />
-                                  </font>
-                                  <styleClass>
-                                      <String fx:value="vBoxButtons" />
-                                      <String fx:value="settings_img" />
-                                  </styleClass>
-                              </MFXButton>
-                              <MFXButton alignment="CENTER" depthLevel="LEVEL0" graphicTextGap="10.0" layoutX="10.0" layoutY="287.0" onAction="#Activity" prefHeight="45.0" prefWidth="208.0" rippleAnimateBackground="false" rippleBackgroundOpacity="0.0" rippleColor="#bdbdbd00" stylesheets="@dashboard.css" text="Activity" textFill="#505664" wrapText="true">
-                                  <graphic>
-                                      <ImageView fitHeight="22.0" fitWidth="22.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
-                                          <image>
-                                              <Image url="@activity_outline.png" />
-                                          </image>
-                                      </ImageView>
-                                  </graphic>
-                                  <font>
-                                      <Font name="Segoe UI Semibold" size="14.0" />
-                                  </font>
-                                  <styleClass>
-                                      <String fx:value="vBoxButtons" />
-                                      <String fx:value="activity_img" />
-                                  </styleClass>
-                              </MFXButton>
-                          </children>
-                      </VBox>
-                  </left>
-                  <center>
-                      <StackPane fx:id="center_pane" prefHeight="643.0" prefWidth="868.0" BorderPane.alignment="CENTER" />
-                  </center>
-              </BorderPane>
-              <Circle layoutX="138.0" layoutY="620.0" radius="8.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0">
-                  <fill>
-                      <LinearGradient endX="0.7488151658767772" endY="0.8909952606635071" startX="0.17061611374407584" startY="0.14691943127962087">
-                          <stops>
-                              <Stop>
-                                  <color>
-                                      <Color red="0.6509804129600525" green="0.6823529601097107" blue="0.4588235318660736" />
-                                  </color>
-                              </Stop>
-                              <Stop offset="0.006711409395973154">
-                                  <color>
-                                      <Color red="0.6509804129600525" green="0.6823529601097107" blue="0.4588235318660736" />
-                                  </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                  <color>
-                                      <Color red="0.3333333432674408" green="0.1882352977991104" blue="0.7450980544090271" />
-                                  </color>
-                              </Stop>
-                          </stops>
-                      </LinearGradient>
-                  </fill>
-                  <effect>
-                      <GaussianBlur radius="1.55" />
-                  </effect>
-              </Circle>
-              <Circle layoutX="34.0" layoutY="448.0" radius="57.0" stroke="TRANSPARENT" strokeType="INSIDE">
-                  <fill>
-                      <LinearGradient endX="0.7488151658767772" endY="0.8909952606635071" startX="0.17061611374407584" startY="0.14691943127962087">
-                          <stops>
-                              <Stop>
-                                  <color>
-                                      <Color red="0.6509804129600525" green="0.6823529601097107" blue="0.4588235318660736" />
-                                  </color>
-                              </Stop>
-                              <Stop offset="0.006711409395973154">
-                                  <color>
-                                      <Color red="0.6509804129600525" green="0.6823529601097107" blue="0.4588235318660736" />
-                                  </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                  <color>
-                                      <Color red="0.3333333432674408" green="0.1882352977991104" blue="0.7450980544090271" />
-                                  </color>
-                              </Stop>
-                          </stops>
-                      </LinearGradient>
-                  </fill>
-                  <effect>
-                      <GaussianBlur radius="41.87" />
-                  </effect>
-              </Circle>
-              <Circle layoutX="141.0" layoutY="499.0" radius="14.0" stroke="TRANSPARENT" strokeType="INSIDE">
-                  <fill>
-                      <LinearGradient endX="0.7488151658767772" endY="0.8909952606635071" startX="0.17061611374407584" startY="0.14691943127962087">
-                          <stops>
-                              <Stop>
-                                  <color>
-                                      <Color red="0.6509804129600525" green="0.6823529601097107" blue="0.4588235318660736" />
-                                  </color>
-                              </Stop>
-                              <Stop offset="0.006711409395973154">
-                                  <color>
-                                      <Color red="0.6509804129600525" green="0.6823529601097107" blue="0.4588235318660736" />
-                                  </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                  <color>
-                                      <Color red="0.3333333432674408" green="0.1882352977991104" blue="0.7450980544090271" />
-                                  </color>
-                              </Stop>
-                          </stops>
-                      </LinearGradient>
-                  </fill>
-                  <effect>
-                      <GaussianBlur radius="12.22" />
-                  </effect>
-              </Circle>
-              <Circle layoutX="52.0" layoutY="580.0" radius="21.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0">
-                  <fill>
-                      <LinearGradient endX="0.7488151658767772" endY="0.8909952606635071" startX="0.17061611374407584" startY="0.14691943127962087">
-                          <stops>
-                              <Stop>
-                                  <color>
-                                      <Color red="0.6509804129600525" green="0.6823529601097107" blue="0.4588235318660736" />
-                                  </color>
-                              </Stop>
-                              <Stop offset="0.006711409395973154">
-                                  <color>
-                                      <Color red="0.6509804129600525" green="0.6823529601097107" blue="0.4588235318660736" />
-                                  </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                  <color>
-                                      <Color red="0.3333333432674408" green="0.1882352977991104" blue="0.7450980544090271" />
-                                  </color>
-                              </Stop>
-                          </stops>
-                      </LinearGradient>
-                  </fill>
-                  <effect>
-                      <GaussianBlur radius="1.55" />
-                  </effect>
-              </Circle>
-         </children>
-      </AnchorPane>
-      <Rectangle arcHeight="5.0" fill="WHITE" height="171.0" layoutX="7.0" layoutY="410.0" stroke="WHITE" strokeType="INSIDE" width="41.0" />
-      <Pane fx:id="movablePane" prefHeight="36.0" prefWidth="1273.0">
-         <children>
-            <MFXButton fx:id="closeBtn" computeRadiusMultiplier="false" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" layoutX="1236.0" layoutY="3.0" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" prefHeight="28.0" prefWidth="28.0" rippleColor="#bdbdbd9e" styleClass="closeBtnDashboard" stylesheets="@dashboard.css">
+            <MFXButton fx:id="logoutBtn" alignment="CENTER" computeRadiusMultiplier="false" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" layoutX="197.0" layoutY="18.0" minHeight="28.0" minWidth="28.0" prefHeight="28.0" prefWidth="28.0" rippleColor="#bdbdbd00" styleClass="rightPaneBtns" stylesheets="@dashboard.css">
                <graphic>
-                  <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@Close.png" />
+                        <Image url="@logout.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
                </graphic>
+            </MFXButton>
+            <Label fx:id="user_name" layoutX="53.0" layoutY="17.0" prefHeight="30.0" prefWidth="126.0" text="SOLOMON ESHUN" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Comfortaa Bold" size="11.0" />
+               </font>
+            </Label>
+            <MFXButton alignment="CENTER" computeRadiusMultiplier="false" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" layoutX="197.0" layoutY="63.0" minHeight="28.0" minWidth="30.0" prefHeight="30.0" prefWidth="30.0" rippleColor="#bdbdbd00" styleClass="rightPaneBtns" stylesheets="@dashboard.css" />
+            <MFXButton alignment="CENTER" computeRadiusMultiplier="false" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" layoutX="197.0" layoutY="288.0" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" prefHeight="28.0" prefWidth="28.0" rippleColor="#bdbdbd00" styleClass="rightPaneBtns" stylesheets="@dashboard.css" />
+            <Text fill="WHITE" layoutX="16.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total no. of learners">
+               <font>
+                  <Font name="Comfortaa Bold" size="13.0" />
+               </font>
+            </Text>
+            <Label fx:id="numOfContactsLabel" layoutX="215.0" layoutY="118.0" styleClass="contactLabel" stylesheets="@dashboard.css" text="16" textFill="#979090">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
-            </MFXButton>
-            <MFXButton fx:id="minimizeBtn" computeRadiusMultiplier="false" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" layoutX="1207.0" layoutY="2.0" maxHeight="28.0" maxWidth="28.0" minWidth="28.0" prefHeight="28.0" prefWidth="28.0" rippleColor="#bdbdbd9e" styleClass="minimizeBtnDashboard" stylesheets="@dashboard.css">
-               <graphic>
-                  <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@minimize.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </MFXButton>
+            </Label>
+            <MFXButton alignment="CENTER" computeRadiusMultiplier="false" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" layoutX="197.0" layoutY="466.0" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" prefHeight="28.0" prefWidth="28.0" rippleColor="#bdbdbd00" styleClass="rightPaneBtns" stylesheets="@dashboard.css" />
+            <Label fx:id="abbr_name" layoutX="10.0" layoutY="63.0" prefHeight="30.0" prefWidth="118.0" text="S Eshun" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Comfortaa Bold" size="12.0" />
+               </font>
+            </Label>
+            <GNAvatarView fx:id="user_profile" layoutX="14.0" layoutY="15.0" prefHeight="30.0" prefWidth="30.0" stroke="#ffffff00" strokeWidth="0.0" type="CIRCLE">
+               <image>
+                  <Image url="@male_user.png" />
+               </image>
+            </GNAvatarView>
          </children>
       </Pane>
-    </children>
+      <Pane layoutX="39.0" layoutY="219.0" prefHeight="90.0" prefWidth="116.0" style="-fx-background-color: #172242; -fx-background-radius: 15;">
+         <children>
+            <MFXProgressSpinner layoutX="17.0" layoutY="7.0" prefHeight="76.0" prefWidth="83.0" progress="0.74" stylesheets="@dashboard.css" />
+         </children>
+      </Pane>
+      <MFXButton alignment="CENTER" computeRadiusMultiplier="false" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" layoutX="434.0" layoutY="47.0" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" prefHeight="28.0" prefWidth="28.0" rippleColor="#bdbdbd00" styleClass="mainPaneBtns" stylesheets="@dashboard.css" />
+      <Label fx:id="user_email" alignment="CENTER" layoutX="229.0" layoutY="535.0" prefHeight="30.0" prefWidth="211.0" text="solomoneinsteinmit@gmail.com" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="user_acc_id" layoutX="259.0" layoutY="576.0" text="13464" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Segoe UI Semibold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="user_password" layoutX="395.0" layoutY="571.0" prefHeight="27.0" prefWidth="53.0" text="great" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Segoe UI Semibold" size="15.0" />
+         </font>
+      </Label>
+      <Text fill="WHITE" layoutX="313.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSWORD: ">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="234.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID: ">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Text>
+      <Label layoutX="107.0" layoutY="75.0" text="come up with something to design this page" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="362.0" layoutY="252.0" text="DASHBOARD" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="106.0" layoutY="106.0" text="also do well to change the names of the tabs" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>

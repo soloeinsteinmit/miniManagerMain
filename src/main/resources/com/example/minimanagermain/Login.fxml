@@ -44,16 +44,6 @@
                         <VBox fx:id="signIn_vBox" layoutY="60.0" prefHeight="447.0" prefWidth="443.0" style="-fx-background-color: #0E172A;" />
                         <VBox fx:id="createAccount_vBox" layoutX="276.0" layoutY="39.0" prefHeight="462.0" prefWidth="433.0" style="-fx-background-color: #0E172A;" visible="false" />
                         <VBox fx:id="vBox" alignment="TOP_RIGHT" layoutX="442.0" prefHeight="538.0" prefWidth="271.0" style="-fx-background-color: white; -fx-background-radius: 10 10 10 10;" />
-                        <Text fx:id="ibank_signUp" fill="#5530be" layoutX="72.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="miniManager">
-                           <font>
-                              <Font name="Comfortaa Bold" size="18.0" />
-                           </font>
-                        </Text>
-                        <ImageView fx:id="logo_signUp" fitHeight="40.0" fitWidth="40.0" layoutX="22.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@icon.png" />
-                           </image>
-                        </ImageView>
                      </children>
                   </AnchorPane>
                </children>

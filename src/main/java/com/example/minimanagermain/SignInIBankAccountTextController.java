@@ -92,26 +92,26 @@ public class SignInIBankAccountTextController implements Initializable {
                 alert.show();
             } else{
                 try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("main_page.fxml"));
                     root = loader.load();
 
                     if (ValidateEmail.validateEmail(getEmailText.getText())){
 
-                        HomeController.str_userName = userName;
-                        HomeController.str_email = email_textField_signUp.getText();
-                        HomeController.str_accId = acc_id_textField_signUp.getText();
-                        HomeController.str_password = password_textField_signUp.getText();
+                        DashboardController.str_userName = userName;
+                        DashboardController.str_email = email_textField_signUp.getText();
+                        DashboardController.str_accId = acc_id_textField_signUp.getText();
+                        DashboardController.str_password = password_textField_signUp.getText();
 
                         String[] splitName = userName.split(" ");
                         String[] firstName = splitName[0].split("");
                         // gotten abbr name
-                        HomeController.str_abbrName = firstName[0] + " " + splitName[splitName.length-1];
-                        System.out.println(HomeController.str_abbrName);
+                        DashboardController.str_abbrName = firstName[0] + " " + splitName[splitName.length-1];
+                        System.out.println(DashboardController.str_abbrName);
 
                         System.out.println(Arrays.toString(splitName));
                         System.out.println(Arrays.toString(firstName));
 
-                        HomeController.setUserCredentials();
+                        DashboardController.setUserCredentials();
 
                         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
                         scene = new Scene(root);

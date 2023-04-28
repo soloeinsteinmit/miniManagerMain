@@ -70,7 +70,7 @@ public class CreateAccountController implements Initializable {
     private void signUp_user(){
         signUpBtn.setOnMouseClicked(event ->{
             try {
-                ChangingScene.changeSceneWindow(event, "dashboard");
+                ChangingScene.changeSceneWindow(event, "main_page");
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
