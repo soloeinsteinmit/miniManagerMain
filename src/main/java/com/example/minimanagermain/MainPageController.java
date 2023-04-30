@@ -44,7 +44,6 @@ public class MainPageController implements Initializable {
             System.out.println("Home");
             GetFXMLFiles.getFxmlFile(centerPane, "dashboard.fxml");
             homeBtn.setFocusTraversable(true);
-            DashboardController.setUserCredentials();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -87,7 +86,7 @@ public class MainPageController implements Initializable {
 
     public void assessment(javafx.event.ActionEvent event) throws IOException {
         System.out.println("Assessment");
-        GetFXMLFiles.getFxmlFile(centerPane, "admission.fxml");
+        GetFXMLFiles.getFxmlFile(centerPane, "assessment.fxml");
     }
 
 }

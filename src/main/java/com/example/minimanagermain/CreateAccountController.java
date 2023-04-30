@@ -1,25 +1,34 @@
 package com.example.minimanagermain;
 
+import com.example.minimanagermain.OtherClasses.DataAccess;
+import com.example.minimanagermain.OtherClasses.PrintValues;
+import com.example.minimanagermain.OtherClasses.RandomIdGenerator;
+import com.example.minimanagermain.OtherClasses.ValidateEmail;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXPasswordField;
 import io.github.palexdev.materialfx.controls.MFXTextField;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Random;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 
 /**
  * @author Solomon Eshun
+ * This class creates a new account for the user
 * */
 public class CreateAccountController implements Initializable {
 
     @FXML
     private MFXTextField account_id_textField_signIn;
+
+    @FXML
+    private MFXTextField class_textField_signIn;
 
     @FXML
     private MFXTextField email_textField_signIn;
@@ -34,10 +43,16 @@ public class CreateAccountController implements Initializable {
     private MFXPasswordField password_textField_signIn;
 
     @FXML
+    private MFXTextField phoneNumber_textField_signIn11;
+
+    @FXML
+    private MFXTextField schoolName_textField_signIn;
+
+    @FXML
     private MFXButton signUp_btn_signIn;
 
     @FXML
-    public static Pane translateSignInPane;
+    private Pane translateSignInPane;
 
     public static boolean isFound;
     public static MFXButton signUpBtn;
@@ -46,7 +61,6 @@ public class CreateAccountController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         signUpBtn = signUp_btn_signIn;
-        generateAccId();
         signUp_user();
 
 
@@ -55,13 +69,11 @@ public class CreateAccountController implements Initializable {
     /**
     * generate user account id
     * */
-    private void generateAccId(){
-        generate_accId_btn.setOnAction(event1 -> {
-            Random acc_id = new Random();
-            int min = 11111;
-            int max = 99999;
-            account_id_textField_signIn.setText("G-"+ String.valueOf(acc_id.nextInt(max - min + 1)+min));
-        });
+
+
+    @FXML
+    void generate_accId_btn(ActionEvent event) {
+        account_id_textField_signIn.setText(RandomIdGenerator.accountId(1111, 9999));
     }
 
     /**
@@ -70,8 +82,28 @@ public class CreateAccountController implements Initializable {
     private void signUp_user(){
         signUpBtn.setOnMouseClicked(event ->{
             try {
-                ChangingScene.changeSceneWindow(event, "main_page");
-            } catch (IOException e) {
+                if (account_id_textField_signIn.getText().isEmpty() || name_textField_signIn.getText().isEmpty()||
+                    class_textField_signIn.getText().isEmpty()|| phoneNumber_textField_signIn11.getText().isEmpty()||
+                        email_textField_signIn.getText().isEmpty()||  password_textField_signIn.getText().isEmpty()||
+                        schoolName_textField_signIn.getText().isEmpty()){
+
+                    PrintValues.print("Please fill in all the forms");
+
+                }else {
+                    if (DataAccess.createUserAccount(account_id_textField_signIn.getText(), name_textField_signIn.getText(),
+                            class_textField_signIn.getText(), phoneNumber_textField_signIn11.getText(),
+                            email_textField_signIn.getText(), password_textField_signIn.getText(),
+                            schoolName_textField_signIn.getText()) && !ValidateEmail.validateEmail(email_textField_signIn.getText())){
+                        PrintValues.print("User already exist or please check your email address");
+                    }else {
+                        DataAccess.getIdOfLoggedInUser = account_id_textField_signIn.getText();
+
+                        ChangingScene.changeSceneWindow(event, "main_page");
+                    }
+                }
+
+
+            } catch (IOException | SQLException e) {
                 throw new RuntimeException(e);
             }
         });

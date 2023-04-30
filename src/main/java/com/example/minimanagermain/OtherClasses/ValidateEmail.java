@@ -35,12 +35,6 @@ public class ValidateEmail {
             alert.showAndWait();
             return false;
 
-
-
-            //final Tooltip tooltipFullScreen = new Tooltip();
-            //tooltipFullScreen.setText("Press to toggle full screen. Press Esc to exit full screen");
-            //tooltipFullScreen.setShowDelay(Duration.seconds(1));
-            //fullScreen.setTooltip(tooltipFullScreen);
         }
     }
 }

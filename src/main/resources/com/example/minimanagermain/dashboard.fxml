@@ -9,10 +9,11 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="643.0" prefWidth="868.0" style="-fx-background-color: #0E172A; -fx-background-radius: 0 40 40 0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.DashboardController">
+<AnchorPane prefHeight="643.0" prefWidth="868.0" style="-fx-background-color: #0E172A; -fx-background-radius: 0 30 30 0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.DashboardController">
    <children>
       <Pane layoutX="601.0" layoutY="19.0" prefHeight="606.0" prefWidth="247.0" style="-fx-background-color: #172242; -fx-background-radius: 20;" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="19.0">
          <children>
@@ -33,14 +34,12 @@
                   <Font name="Comfortaa Bold" size="11.0" />
                </font>
             </Label>
-            <MFXButton alignment="CENTER" computeRadiusMultiplier="false" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" layoutX="197.0" layoutY="63.0" minHeight="28.0" minWidth="30.0" prefHeight="30.0" prefWidth="30.0" rippleColor="#bdbdbd00" styleClass="rightPaneBtns" stylesheets="@dashboard.css" />
-            <MFXButton alignment="CENTER" computeRadiusMultiplier="false" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" layoutX="197.0" layoutY="288.0" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" prefHeight="28.0" prefWidth="28.0" rippleColor="#bdbdbd00" styleClass="rightPaneBtns" stylesheets="@dashboard.css" />
-            <Text fill="WHITE" layoutX="16.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total no. of learners">
+            <Text fill="WHITE" layoutX="16.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total no. of learners">
                <font>
                   <Font name="Comfortaa Bold" size="13.0" />
                </font>
             </Text>
-            <Label fx:id="numOfContactsLabel" layoutX="215.0" layoutY="118.0" styleClass="contactLabel" stylesheets="@dashboard.css" text="16" textFill="#979090">
+            <Label fx:id="totalNumberOfLearners" alignment="CENTER" layoutX="203.0" layoutY="109.0" prefHeight="17.0" prefWidth="28.0" styleClass="contactLabel" stylesheets="@dashboard.css" text="16" textFill="#979090" wrapText="true">
                <font>
                   <Font name="Yu Gothic Bold" size="14.0" />
                </font>
@@ -48,8 +47,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Label>
-            <MFXButton alignment="CENTER" computeRadiusMultiplier="false" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" layoutX="197.0" layoutY="466.0" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" prefHeight="28.0" prefWidth="28.0" rippleColor="#bdbdbd00" styleClass="rightPaneBtns" stylesheets="@dashboard.css" />
-            <Label fx:id="abbr_name" layoutX="10.0" layoutY="63.0" prefHeight="30.0" prefWidth="118.0" text="S Eshun" textFill="WHITE" wrapText="true">
+            <Label fx:id="abbr_name" layoutX="15.0" layoutY="50.0" prefHeight="30.0" prefWidth="212.0" text="S Eshun" textFill="WHITE" visible="false" wrapText="true">
                <font>
                   <Font name="Comfortaa Bold" size="12.0" />
                </font>
@@ -59,53 +57,221 @@
                   <Image url="@male_user.png" />
                </image>
             </GNAvatarView>
-         </children>
-      </Pane>
-      <Pane layoutX="39.0" layoutY="219.0" prefHeight="90.0" prefWidth="116.0" style="-fx-background-color: #172242; -fx-background-radius: 15;">
-         <children>
-            <MFXProgressSpinner layoutX="17.0" layoutY="7.0" prefHeight="76.0" prefWidth="83.0" progress="0.74" stylesheets="@dashboard.css" />
+            <Text fill="WHITE" layoutX="16.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Males">
+               <font>
+                  <Font name="Comfortaa Bold" size="13.0" />
+               </font>
+            </Text>
+            <Label fx:id="numberOfMales" alignment="CENTER" layoutX="203.0" layoutY="135.0" prefHeight="17.0" prefWidth="28.0" styleClass="contactLabel" stylesheets="@dashboard.css" text="16" textFill="#979090" wrapText="true">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Text fill="WHITE" layoutX="18.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Females">
+               <font>
+                  <Font name="Comfortaa Bold" size="13.0" />
+               </font>
+            </Text>
+            <Label fx:id="numberOfFemales" alignment="CENTER" layoutX="202.0" layoutY="161.0" prefHeight="17.0" prefWidth="30.0" styleClass="contactLabel" stylesheets="@dashboard.css" text="16" textFill="#979090" wrapText="true">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Pane layoutX="58.0" layoutY="211.0" prefHeight="90.0" prefWidth="116.0" style="-fx-background-color: #172242; -fx-background-radius: 15;">
+               <children>
+                  <MFXProgressSpinner fx:id="progressSpinnerMale" layoutX="17.0" layoutY="7.0" prefHeight="76.0" prefWidth="83.0" progress="0.74" stylesheets="@dashboard.css" />
+               </children>
+            </Pane>
+            <Pane layoutX="58.0" layoutY="343.0" prefHeight="90.0" prefWidth="116.0" style="-fx-background-color: #172242; -fx-background-radius: 15;">
+               <children>
+                  <MFXProgressSpinner fx:id="progressSpinnerFemale" layoutX="17.0" layoutY="7.0" prefHeight="76.0" prefWidth="83.0" progress="0.55" stylesheets="@dashboard.css" />
+               </children>
+            </Pane>
+            <Text fill="WHITE" layoutX="54.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Percentage of males">
+               <font>
+                  <Font name="Comfortaa Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="47.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Percentage of females">
+               <font>
+                  <Font name="Comfortaa Bold" size="13.0" />
+               </font>
+            </Text>
+            <Label layoutX="58.0" layoutY="81.0" prefHeight="28.0" prefWidth="126.0" text="LEARNER INFO" textFill="#4800ff" wrapText="true">
+               <font>
+                  <Font name="Segoe UI Semibold" size="17.0" />
+               </font>
+            </Label>
+            <Line endX="111.0" layoutX="115.0" layoutY="80.0" startX="-100.0" stroke="#ffffff4c" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="0.5" />
+            <Line endX="111.0" layoutX="118.0" layoutY="443.0" startX="-100.0" stroke="#ffffff4c" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="0.5" />
+            <Label layoutX="58.0" layoutY="455.0" prefHeight="28.0" prefWidth="132.0" text="SEMESTER INFO" textFill="#4800ff" wrapText="true">
+               <font>
+                  <Font name="Segoe UI Semibold" size="17.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" layoutX="8.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Academic year">
+               <font>
+                  <Font name="Comfortaa Bold" size="13.0" />
+               </font>
+            </Text>
+            <Label fx:id="academicYear" alignment="CENTER" layoutX="171.0" layoutY="483.0" prefHeight="17.0" prefWidth="56.0" styleClass="contactLabel" stylesheets="@dashboard.css" text="2021" textFill="#979090">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Text fill="WHITE" layoutX="10.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semester">
+               <font>
+                  <Font name="Comfortaa Bold" size="13.0" />
+               </font>
+            </Text>
+            <Label fx:id="semester" alignment="CENTER" layoutX="171.0" layoutY="507.0" prefHeight="17.0" prefWidth="56.0" styleClass="contactLabel" stylesheets="@dashboard.css" text="First" textFill="#979090">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Text fill="WHITE" layoutX="11.0" layoutY="543.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Next sem begins">
+               <font>
+                  <Font name="Comfortaa Bold" size="13.0" />
+               </font>
+            </Text>
+            <Label fx:id="nextSemBegins" alignment="CENTER" layoutX="154.0" layoutY="530.0" prefHeight="17.0" prefWidth="83.0" styleClass="contactLabel" stylesheets="@dashboard.css" text="01/01/2029" textFill="#979090">
+               <font>
+                  <Font name="Yu Gothic Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="41.0" layoutX="199.0" layoutY="557.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@info.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
       <MFXButton alignment="CENTER" computeRadiusMultiplier="false" contentDisplay="GRAPHIC_ONLY" depthLevel="LEVEL0" layoutX="434.0" layoutY="47.0" maxHeight="28.0" maxWidth="28.0" minHeight="28.0" minWidth="28.0" prefHeight="28.0" prefWidth="28.0" rippleColor="#bdbdbd00" styleClass="mainPaneBtns" stylesheets="@dashboard.css" />
-      <Label fx:id="user_email" alignment="CENTER" layoutX="229.0" layoutY="535.0" prefHeight="30.0" prefWidth="211.0" text="solomoneinsteinmit@gmail.com" textFill="WHITE" wrapText="true">
+      <Pane layoutX="88.0" layoutY="128.0" prefHeight="206.0" prefWidth="446.0" style="-fx-background-color: #172242; -fx-background-radius: 15;">
+         <children>
+            <Label fx:id="accountId" layoutX="147.0" layoutY="53.0" prefHeight="28.0" prefWidth="162.0" text="13464" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Segoe UI Semibold" size="19.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" layoutX="26.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ACCOUNT ID:">
+               <font>
+                  <Font name="Segoe UI Semibold" size="19.0" />
+               </font>
+            </Text>
+            <Label fx:id="phoneNumber" layoutX="184.0" layoutY="88.0" prefHeight="28.0" prefWidth="199.0" text="1234567890" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Segoe UI Semibold" size="19.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" layoutX="26.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PHONE NUMBER:">
+               <font>
+                  <Font name="Segoe UI Semibold" size="19.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="26.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EMAIL:">
+               <font>
+                  <Font name="Segoe UI Semibold" size="19.0" />
+               </font>
+            </Text>
+            <Label fx:id="email" layoutX="90.0" layoutY="123.0" prefHeight="30.0" prefWidth="331.0" text="solomoneinsteinmit@gmail.com" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Segoe UI Semibold" size="19.0" />
+               </font>
+            </Label>
+            <Pane layoutX="247.0" prefHeight="40.0" prefWidth="199.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #2a2fcd 0.0%, #792222 100.0%); -fx-background-radius: 2 15 0 2;">
+               <children>
+                  <Label layoutX="24.0" layoutY="6.0" prefHeight="28.0" prefWidth="152.0" text="PERSONAL INFO" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="40.0" fitWidth="73.0" layoutX="387.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@badge_48px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Text fx:id="welcomeMessage" fill="WHITE" layoutX="96.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Solomon Eshun" wrappingWidth="473.609375">
          <font>
-            <Font name="Segoe UI Semibold" size="14.0" />
-         </font>
-      </Label>
-      <Label fx:id="user_acc_id" layoutX="259.0" layoutY="576.0" text="13464" textFill="WHITE" wrapText="true">
-         <font>
-            <Font name="Segoe UI Semibold" size="15.0" />
-         </font>
-      </Label>
-      <Label fx:id="user_password" layoutX="395.0" layoutY="571.0" prefHeight="27.0" prefWidth="53.0" text="great" textFill="WHITE" wrapText="true">
-         <font>
-            <Font name="Segoe UI Semibold" size="15.0" />
-         </font>
-      </Label>
-      <Text fill="WHITE" layoutX="313.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSWORD: ">
-         <font>
-            <Font name="Segoe UI Semibold" size="14.0" />
+            <Font name="Segoe UI Semibold" size="38.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="234.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID: ">
+      <Pane layoutX="55.0" layoutY="379.0" prefHeight="206.0" prefWidth="511.0" style="-fx-background-color: #172242; -fx-background-radius: 15;">
+         <children>
+            <Label fx:id="schoolName" layoutX="158.0" layoutY="53.0" prefHeight="28.0" prefWidth="342.0" text="GRACE ACADEMY" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Segoe UI Semibold" size="19.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" layoutX="14.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SCHOOL NAME:">
+               <font>
+                  <Font name="Segoe UI Semibold" size="19.0" />
+               </font>
+            </Text>
+            <Label fx:id="className" layoutX="136.0" layoutY="88.0" prefHeight="28.0" prefWidth="331.0" text="PRIMARY 6" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Segoe UI Semibold" size="19.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" layoutX="14.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLASS NAME:">
+               <font>
+                  <Font name="Segoe UI Semibold" size="19.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="14.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADDRESS:">
+               <font>
+                  <Font name="Segoe UI Semibold" size="19.0" />
+               </font>
+            </Text>
+            <Label fx:id="address" layoutX="102.0" layoutY="123.0" prefHeight="30.0" prefWidth="394.0" text="14 CHAPEL SQUARE" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Segoe UI Semibold" size="19.0" />
+               </font>
+            </Label>
+            <Pane layoutX="312.0" prefHeight="40.0" prefWidth="199.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #cc2b65 0.0%, #227842 100.0%); -fx-background-radius: 2 15 0 2;">
+               <children>
+                  <Label layoutX="34.0" layoutY="6.0" prefHeight="28.0" prefWidth="132.0" text="SCHOOL INFO" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="40.0" fitWidth="73.0" layoutX="457.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@school.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Text fill="RED" layoutX="192.0" layoutY="630.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please update your semester info at the settings." wrappingWidth="342.0">
          <font>
-            <Font name="Segoe UI Semibold" size="14.0" />
+            <Font name="Comfortaa Bold" size="13.0" />
          </font>
       </Text>
-      <Label layoutX="107.0" layoutY="75.0" text="come up with something to design this page" textFill="WHITE">
+      <Text fill="RED" layoutX="96.0" layoutY="630.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quick Notice:" wrappingWidth="93.85398864746094">
          <font>
-            <Font size="21.0" />
+            <Font name="Comfortaa Bold" size="13.0" />
          </font>
-      </Label>
-      <Label layoutX="362.0" layoutY="252.0" text="DASHBOARD" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="48.0" />
-         </font>
-      </Label>
-      <Label layoutX="106.0" layoutY="106.0" text="also do well to change the names of the tabs" textFill="WHITE">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
+      </Text>
    </children>
 </AnchorPane>

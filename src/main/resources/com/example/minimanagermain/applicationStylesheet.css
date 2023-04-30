@@ -1,0 +1,45 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#bg_color{
+    -fx-background-color: #0070FF;
+}
+
+.btn{
+    -fx-background-color: #0070FF;
+    -fx-border-width:2;
+    -fx-background-radius:15px;
+}
+
+.btn:hover{
+    -fx-background-color: #ffffff;
+    -fx-border-width: 2;
+    -fx-border-color: #0070FF;
+    -fx-border-radius: 15px;
+    -fx-text-fill: #0070FF;
+}
+
+.labels{
+ -fx-text-fill: #0070FF;
+ -fx-font-weight: BOLD;
+}
+.labels:hover{
+  -fx-text-fill: #0070FF;
+  -fx-font-style: ITALIC;
+}
+
+.hbtn{
+    -fx-background-color:#2D2D31;
+}
+
+.tb{
+    -fx-background-color :  #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.7), 10, 0, 0, 0);
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+}
+
+.tboard{
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}

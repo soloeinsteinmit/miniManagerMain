@@ -169,7 +169,7 @@ public class LoginController implements Initializable {
             container.getChildren().setAll(fxml);
 
             fxml = FXMLLoader.load(Objects.requireNonNull(
-                    LoginController.class.getResource("sign_in.fxml")));
+                    LoginController.class.getResource("sign_in_view.fxml")));
 
             panel.getChildren().removeAll();
             panel.getChildren().setAll(fxml);
@@ -204,7 +204,7 @@ public class LoginController implements Initializable {
                 container.getChildren().setAll(fxml);
 
                 fxml = FXMLLoader.load(Objects.requireNonNull(
-                        LoginController.class.getResource("sign_up.fxml")));
+                        LoginController.class.getResource("sign_up_view.fxml")));
 
                 panel.getChildren().removeAll();
                 panel.getChildren().setAll(fxml);
@@ -264,14 +264,14 @@ public class LoginController implements Initializable {
 
     private void logInAccount(){
         try {
-            fxml = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("signIn_iBank.fxml")));
+            fxml = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("signIn_miniManager.fxml")));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
         signIn_vBox.getChildren().setAll(fxml);
 
         try {
-            fxml = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sign_up.fxml")));
+            fxml = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sign_up_view.fxml")));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

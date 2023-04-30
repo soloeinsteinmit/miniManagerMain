@@ -3,6 +3,7 @@
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.effect.GaussianBlur?>
 <?import javafx.scene.image.Image?>
@@ -20,7 +21,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="732.0" prefWidth="1273.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-border-radius: 0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.MainPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="1273.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-border-radius: 0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.MainPageController">
     <children>
       <Circle layoutX="42.0" layoutY="170.0" opacity="0.2" radius="204.0" stroke="TRANSPARENT" strokeType="INSIDE">
          <fill>
@@ -48,20 +49,15 @@
             <GaussianBlur radius="63.0" />
          </effect>
       </Circle>
-      <AnchorPane layoutX="48.0" layoutY="37.0" prefHeight="645.0" prefWidth="1182.0" style="-fx-background-color: #0E172A; -fx-background-radius: 30;">
+      <AnchorPane layoutX="48.0" layoutY="37.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="1182.0" style="-fx-background-color: #0E172A; -fx-background-radius: 30;">
          <children>
-              <BorderPane prefHeight="659.0" prefWidth="1182.0" style="-fx-background-radius: 40;">
+              <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="1182.0" style="-fx-background-radius: 30;">
                   <left>
-                      <VBox prefHeight="643.0" prefWidth="188.0" spacing="2.0" BorderPane.alignment="CENTER">
+                      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="643.0" prefWidth="188.0" spacing="2.0" BorderPane.alignment="CENTER">
                           <children>
                               <Pane prefHeight="66.0" prefWidth="208.0">
                                   <children>
-                                      <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="28.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
-                                          <image>
-                                              <Image url="@paypal.png" />
-                                          </image>
-                                      </ImageView>
-                                      <Text fill="WHITE" layoutX="59.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="miniManager">
+                                      <Text fill="WHITE" layoutX="59.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome">
                                           <font>
                                               <Font name="Comfortaa Bold" size="16.0" />
                                           </font>
@@ -78,8 +74,11 @@
                                   <graphic>
                                       <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" styleClass="home_img">
                                           <image>
-                                              <Image url="@home_outline.png" />
+                                              <Image url="@dashboard_normal.png" />
                                           </image>
+                                 <viewport>
+                                    <Rectangle2D minX="22.0" minY="22.0" />
+                                 </viewport>
                                       </ImageView>
                                   </graphic>
                                   <font>
@@ -94,7 +93,7 @@
                                   <graphic>
                                       <ImageView fitHeight="22.0" fitWidth="22.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
                                           <image>
-                                              <Image url="@analytics_outline.png" />
+                                              <Image url="@students_normal.png" />
                                           </image>
                                       </ImageView>
                                   </graphic>
@@ -110,7 +109,7 @@
                                   <graphic>
                                       <ImageView fitHeight="22.0" fitWidth="22.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
                                           <image>
-                                              <Image url="@wallet_outline.png" />
+                                              <Image url="@admission_hover.png" />
                                           </image>
                                       </ImageView>
                                   </graphic>
@@ -126,7 +125,7 @@
                            <graphic>
                               <ImageView fitHeight="22.0" fitWidth="22.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@profile_outline.png" />
+                                    <Image url="@report_normal.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -151,7 +150,7 @@
                                   </font>
                                   <styleClass>
                                       <String fx:value="vBoxButtons" />
-                                      <String fx:value="profile_img" />
+                                      <String fx:value="profile_img2" />
                                   </styleClass>
                               </MFXButton>
                               <MFXButton alignment="CENTER" depthLevel="LEVEL0" graphicTextGap="10.0" layoutX="10.0" layoutY="287.0" onAction="#assessment" prefHeight="45.0" prefWidth="208.0" rippleAnimateBackground="false" rippleBackgroundOpacity="0.0" rippleColor="#bdbdbd00" stylesheets="@dashboard.css" text="Assessment" textFill="#505664" wrapText="true">
@@ -174,7 +173,7 @@
                                   <graphic>
                                       <ImageView fitHeight="22.0" fitWidth="22.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
                                           <image>
-                                              <Image url="@activity_outline.png" />
+                                              <Image url="@settings_hover.png" />
                                           </image>
                                       </ImageView>
                                   </graphic>
@@ -190,7 +189,11 @@
                       </VBox>
                   </left>
                   <center>
-                      <StackPane fx:id="center_pane" prefHeight="643.0" prefWidth="868.0" BorderPane.alignment="CENTER" />
+                  <AnchorPane minWidth="-Infinity" BorderPane.alignment="CENTER">
+                     <children>
+                            <StackPane fx:id="center_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="994.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
                   </center>
               </BorderPane>
               <Circle layoutX="138.0" layoutY="626.0" radius="8.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0">
@@ -326,6 +329,16 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </MFXButton>
+            <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="47.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@management_48px.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="86.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="miniManager">
+               <font>
+                  <Font name="Comfortaa Bold" size="16.0" />
+               </font>
+            </Text>
          </children>
       </Pane>
     </children>

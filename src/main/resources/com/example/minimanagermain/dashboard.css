@@ -39,64 +39,74 @@
 }
 
 .home_img{
-    -fx-graphic: url(home_outline.png);
+    -fx-graphic: url(dashboard_normal.png);
 }
 .home_img:focused{
-    -fx-graphic: url(home.png);
+    -fx-graphic: url(dashboard_f.png);
 }
-/*.home_img:hover{
-    -fx-graphic: url(home_hover.png);
-}*/
+.home_img:hover{
+    -fx-graphic: url(dashboard_hover.png);
+}
 
 .analytics_img{
-    -fx-graphic: url(analytics_outline.png);
+    -fx-graphic: url(students_normal.png);
 }
 .analytics_img:focused{
-    -fx-graphic: url(analytics.png);
+    -fx-graphic: url(students_f.png);
 }
-/*.analytics_img:hover{
-    -fx-graphic: url(analytics_hover.png);
-}*/
+.analytics_img:hover{
+    -fx-graphic: url(student_hover.png);
+}
 
 .wallet_img{
-    -fx-graphic: url(wallet_outline.png);
+    -fx-graphic: url(admission_normal.png);
 }
 .wallet_img:focused{
-    -fx-graphic: url(wallet.png);
+    -fx-graphic: url(admission_f.png);
 }
-/*.wallet_img:hover{
-    -fx-graphic: url(wallet_hover.png);
-}*/
+.wallet_img:hover{
+    -fx-graphic: url(admission_hover.png);
+}
 
 .profile_img{
-    -fx-graphic: url(profile_outline.png);
+    -fx-graphic: url(report_normal.png);
 }
 .profile_img:focused{
-    -fx-graphic: url(profile.png);
+    -fx-graphic: url(report_f.png);
 }
-/*.profile_img:hover{
-    -fx-graphic: url(profile_hover.png);
-}*/
+.profile_img:hover{
+    -fx-graphic: url(report_hover.png);
+}
+
+.profile_img2{
+    -fx-graphic: url(remarks_normal.png);
+}
+.profile_img2:focused{
+    -fx-graphic: url(remarks_f.png);
+}
+.profile_img2:hover{
+    -fx-graphic: url(remarks_hover.png);
+}
 
 .settings_img{
-    -fx-graphic: url(settings_outline.png);
+    -fx-graphic: url(assessment_normal.png);
 }
 .settings_img:focused{
-    -fx-graphic: url(settings.png);
+    -fx-graphic: url(assessment_f.png);
 }
-/*.settings_img:hover{
-    -fx-graphic: url(settings_hover.png);
-}*/
+.settings_img:hover{
+    -fx-graphic: url(assessment_hover.png);
+}
 
 .activity_img{
-    -fx-graphic: url(activity_outline.png);
+    -fx-graphic: url(settings_normal.png);
 }
 .activity_img:focused{
-    -fx-graphic: url(activity.png);
+    -fx-graphic: url(settings_f.png);
 }
-/*.activity_img:hover{
-    -fx-graphic: url(activity_hover.png);
-}*/
+.activity_img:hover{
+    -fx-graphic: url(settings_hover.png);
+}
 
 .rightPaneBtns{
     -fx-background-color:  #172242;

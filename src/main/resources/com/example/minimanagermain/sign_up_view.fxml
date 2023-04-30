@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="sign_up" prefHeight="538.0" prefWidth="271.0" style="-fx-background-color: #5530be; -fx-background-radius: 0 10 10 0;" styleClass="bg_color" stylesheets="@miniManagerStyleSheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.SignUpController">
+   <children>
+      <Circle fill="#16214021" layoutX="34.0" layoutY="361.0" radius="13.0" stroke="TRANSPARENT" strokeType="INSIDE">
+         <effect>
+            <GaussianBlur radius="1.85" />
+         </effect>
+      </Circle>
+      <Text fill="WHITE" layoutX="28.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello, Friend!" textAlignment="CENTER" wrappingWidth="215.4375">
+         <font>
+            <Font name="Leelawadee UI Bold" size="34.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#16214021" height="26.0" layoutX="246.0" layoutY="297.0" rotate="33.7" stroke="TRANSPARENT" strokeType="INSIDE" width="23.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#16214021" height="20.0" layoutX="17.0" layoutY="203.0" rotate="38.7" stroke="TRANSPARENT" strokeType="INSIDE" width="34.0" />
+      <Polygon fill="#16214021" layoutX="153.0" layoutY="506.0" points="-50.0, 40.0, 50.0, 40.0, 0.0, -60.0" rotate="160.0" stroke="TRANSPARENT" strokeType="INSIDE">
+         <effect>
+            <Glow />
+         </effect>
+      </Polygon>
+      <Text fill="WHITE" layoutX="42.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your peronal details and start a journey with us" textAlignment="CENTER" wrappingWidth="186.94775390625">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Text>
+      <MFXButton fx:id="signUpBtn" alignment="CENTER" depthLevel="LEVEL0" layoutX="56.0" layoutY="322.0" prefHeight="52.0" prefWidth="158.0" rippleAnimateShadow="true" rippleColor="#bdbdbd12" styleClass="btn_sign_out" stylesheets="@miniManagerStyleSheet.css" text="SIGN UP" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Semibold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MFXButton>
+      <ImageView fitHeight="137.0" fitWidth="154.0" layoutX="117.0" pickOnBounds="true">
+         <image>
+            <Image url="@Frame.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
