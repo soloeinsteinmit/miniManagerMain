@@ -1,34 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import io.github.palexdev.materialfx.controls.MFXTableColumn?>
+<?import io.github.palexdev.materialfx.controls.MFXTableView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="643.0" prefWidth="868.0" style="-fx-background-color: #0E172A; -fx-background-radius: 0 40 40 0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.ViewStudentsController">
+<AnchorPane prefHeight="643.0" prefWidth="994.0" style="-fx-background-color: #EEEEEE; -fx-background-radius: 0 30 30 0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minimanagermain.ViewStudentsController">
    <children>
-      <Label alignment="CENTER" layoutX="255.0" layoutY="287.0" text="I AM ANALYTICS" wrapText="true">
+      <MFXTableView layoutY="-1.0" prefHeight="643.0" prefWidth="959.0" />
+      <MFXTableColumn minWidth="61.0" prefHeight="40.0" prefWidth="61.0" text="SID">
          <font>
-            <Font name="Segoe UI Semibold" size="47.0" />
+            <Font size="14.0" />
          </font>
-         <textFill>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.5657894611358643" green="0.0628654956817627" blue="0.0628654956817627" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="0.17402736842632294" green="0.15235136449337006" blue="0.8026315569877625" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </textFill>
-      </Label>
+      </MFXTableColumn>
+      <MFXTableColumn layoutX="61.0" minWidth="61.0" prefHeight="42.0" prefWidth="183.0" text="STUDENT NAME">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </MFXTableColumn>
+      <MFXTableColumn layoutX="244.0" minWidth="61.0" prefHeight="42.0" prefWidth="132.0" text="PHONE NUMBER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </MFXTableColumn>
+      <MFXTableColumn layoutX="519.0" minWidth="61.0" prefHeight="42.0" prefWidth="91.0" text="GENDER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </MFXTableColumn>
+      <MFXTableColumn layoutX="376.0" minWidth="61.0" prefHeight="42.0" prefWidth="143.0" text="EMAIL">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </MFXTableColumn>
+      <MFXTableColumn layoutX="610.0" minWidth="61.0" prefHeight="42.0" prefWidth="191.0" text="PARENT NAME">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </MFXTableColumn>
+      <MFXTableColumn layoutX="801.0" minWidth="61.0" prefHeight="42.0" prefWidth="157.0" text="PARENT NUMBER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </MFXTableColumn>
    </children>
 </AnchorPane>
